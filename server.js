@@ -21,7 +21,6 @@ const firebase = initializeApp(firebaseConfig);
 const dp = getFirestore();
 // init server
 const app = express();
-const port = process.env.PORT || 3000;
 //middle wares
 app.use(express.static("public"));
 app.use(express.json());
@@ -191,10 +190,7 @@ app.use((req, res) => {
 })
 
 app.listen(port, () => {
-<<<<<<< HEAD
     console.log('listening on port'+ port.toString());
-=======
     console.log('listening on port '+port.toString());
->>>>>>> 450ea7028e955d6a420706eef3b3ba973afdb4b9
 })
 
